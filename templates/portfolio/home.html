@@ -1,0 +1,150 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ name }} | Personal Website</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=14">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#me" aria-label="{{ name }} home">
+      <span>ZR</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#me">Me</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section intro" id="me">
+      <div class="intro-copy">
+        <p class="eyebrow">Personal portfolio</p>
+        <h1>{{ role }}</h1>
+        <p class="lead">
+          For anyone visiting for the first time, welcome!
+          I'm {{ name }}, a passionate software developer dedicated to crafting elegant solutions and meaningful digital experiences. 
+          I am from Foshan, China and currently studying at the University of California, Irvine.
+          I like music and artworks, and I can speak English, Mandarin and Cantonese. I am eager to connect with like-minded individuals, explore new opportunities, and contribute to impactful projects.
+        </p>
+        <div class="skill-row" aria-label="Skills">
+          {% for skill in skills %}
+            <span>{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="portrait-window">
+        <img src="{% static 'portfolio/img/profile.jpg' %}" alt="{{ name }} profile photo">
+        <div class="window-caption">
+          <strong>Currently</strong>
+          <span>Designing useful systems with quiet, polished details.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education-section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>UC Irvine</h2>
+      </div>
+      <div class="education-layout">
+        <img class="education-logo" src="{% static 'portfolio/img/uci-logo.png' %}" alt="UC Irvine Anteaters logo">
+        <div class="education-copy">
+          <span>2024 - 2028</span>
+          <h3>Computer Science and Engineering</h3>
+          <p>
+            I am a student at the University of California, Irvine, studying Computer Science and Engineering.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-grid">
+        {% for project in projects %}
+          <article class="project-card">
+            <img src="{{ project.image }}" alt="{{ project.name }} preview">
+            <div>
+              <p>{{ project.kind }}</p>
+              <h3>{{ project.name }}</h3>
+              <span>{{ project.description }}</span>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Start a conversation</p>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-layout">
+        <p>
+          Reach out for project ideas, collaboration, or anything that should become real.
+        </p>
+        <div class="contact-list" aria-label="Contact details">
+          <a href="tel:+19496565800">
+            <span>Phone</span>
+            <strong>{{ phone }}</strong>
+          </a>
+          <a href="mailto:{{ email }}">
+            <span>Email</span>
+            <strong>{{ email }}</strong>
+          </a>
+          <a href="https://www.instagram.com/{{ instagram }}/" target="_blank" rel="noreferrer">
+            <span>Instagram</span>
+            <strong>@{{ instagram }}</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resume-section" id="resume">
+      <div class="section-heading">
+        <p class="eyebrow">Experience snapshot</p>
+        <h2>Resume</h2>
+      </div>
+      <div class="timeline">
+        {% for entry in resume_entries %}
+          <article>
+            <span>{{ entry.date }}</span>
+            {% if entry.logo %}
+              <div class="resume-logo-frame">
+                <img src="{% static entry.logo %}" alt="{{ entry.logo_alt }}">
+              </div>
+            {% endif %}
+            <div>
+              <h3>{{ entry.title }}</h3>
+              <p class="resume-place">{{ entry.place }}</p>
+              <ul>
+                {% for detail in entry.details %}
+                  <li>{{ detail }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+      <a class="resume-link" href="{% static 'portfolio/docs/2026Resume.pdf' %}" target="_blank" rel="noreferrer">View full resume</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>{{ name }}</span>
+    <a href="mailto:{{ email }}">{{ email }}</a>
+  </footer>
+
+  <script src="{% static 'portfolio/js/site.js' %}"></script>
+</body>
+</html>
