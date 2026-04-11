@@ -286,6 +286,72 @@ h3 {
   line-height: 1.75;
 }
 
+.life-layout {
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.82fr) minmax(0, 1.18fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.life-copy,
+.life-card {
+  border: 1px solid var(--line);
+  background: var(--glass);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.life-copy {
+  display: grid;
+  gap: 1rem;
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+}
+
+.life-lead {
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.life-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: minmax(14rem, auto);
+  gap: 1rem;
+}
+
+.life-card {
+  overflow: hidden;
+  margin: 0;
+}
+
+.life-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 14rem;
+  object-fit: cover;
+}
+
+.life-card-tall {
+  grid-row: span 2;
+}
+
+.life-card-wide {
+  grid-column: span 2;
+}
+
+.life-card-wide img {
+  min-height: 16rem;
+}
+
+.life-card figcaption {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--faint-line);
+  color: var(--muted);
+  background: rgba(0, 0, 0, 0.45);
+  font-size: 0.88rem;
+}
+
 .project-card {
   overflow: hidden;
   border-radius: 0;
@@ -505,9 +571,20 @@ button:hover,
 
   .intro,
   .education-layout,
+  .life-layout,
   .project-grid,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .life-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .life-card-tall,
+  .life-card-wide {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   h1 {

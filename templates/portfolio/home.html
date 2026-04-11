@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ name }} | Personal Website</title>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=14">
+  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=15">
 </head>
 <body>
   <header class="site-header">
@@ -16,6 +16,7 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="#me">Me</a>
       <a href="#education">Education</a>
+      <a href="#life">Life</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       <a href="#resume">Resume</a>
@@ -28,10 +29,10 @@
         <p class="eyebrow">Personal portfolio</p>
         <h1>{{ role }}</h1>
         <p class="lead">
-          For anyone visiting for the first time, welcome!
-          I'm {{ name }}, a passionate software developer dedicated to crafting elegant solutions and meaningful digital experiences. 
-          I am from Foshan, China and currently studying at the University of California, Irvine.
-          I like music and artworks, and I can speak English, Mandarin and Cantonese. I am eager to connect with like-minded individuals, explore new opportunities, and contribute to impactful projects.
+          For anyone visiting for the first time, welcome!<br>
+          <br>I'm {{ name }}, a passionate software developer dedicated to crafting elegant solutions and meaningful digital experiences.<br> 
+          <br>I am from Foshan, China and currently studying at the University of California, Irvine.<br>
+          <br>I like music and artworks, and I can speak English, Mandarin and Cantonese. I am eager to connect with like-minded individuals, explore new opportunities, and contribute to impactful projects.
         </p>
         <div class="skill-row" aria-label="Skills">
           {% for skill in skills %}
@@ -43,7 +44,7 @@
         <img src="{% static 'portfolio/img/profile.jpg' %}" alt="{{ name }} profile photo">
         <div class="window-caption">
           <strong>Currently</strong>
-          <span>Designing useful systems with quiet, polished details.</span>
+          <span>Living my life in a way that brings me joy!</span>
         </div>
       </div>
     </section>
@@ -61,6 +62,41 @@
           <p>
             I am a student at the University of California, Irvine, studying Computer Science and Engineering.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section life-section" id="life">
+      <div class="section-heading">
+        <p class="eyebrow">Life</p>
+        <h2>Outside Work</h2>
+      </div>
+      <div class="life-layout">
+        <div class="life-copy">
+          <p class="life-lead">
+            Music keeps me grounded, and Juice WRLD is the artist I listen to the most. I love cats, I enjoy the quiet focus of calligraphy, and I like collecting moments that feel personal, calm, and real.
+          </p>
+          <p>
+            This side of my life matters to how I build too: rhythm, patience, emotion, detail, and a sense of style that feels honest instead of forced.
+          </p>
+        </div>
+        <div class="life-gallery">
+          <figure class="life-card life-card-tall">
+            <img src="{% static 'portfolio/img/calligraphy.jpg' %}" alt="Calligraphy artwork by {{ name }}">
+            <figcaption>Calligraphy</figcaption>
+          </figure>
+          <figure class="life-card">
+            <img src="{% static 'portfolio/img/juice-wrld.jpg' %}" alt="Juice WRLD performing on stage">
+            <figcaption>Juice WRLD</figcaption>
+          </figure>
+          <figure class="life-card">
+            <img src="{% static 'portfolio/img/profile.jpg' %}" alt="{{ name }} portrait">
+            <figcaption>Portrait</figcaption>
+          </figure>
+          <figure class="life-card life-card-wide">
+            <img src="{% static 'portfolio/img/life-photo.png' %}" alt="{{ name }} at night overlooking city lights">
+            <figcaption>Night View</figcaption>
+          </figure>
         </div>
       </div>
     </section>
