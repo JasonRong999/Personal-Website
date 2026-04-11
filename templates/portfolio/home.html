@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ name }} | Personal Website</title>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=17">
+  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=18">
 </head>
 <body>
   <header class="site-header">
@@ -16,7 +16,6 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="#me">Me</a>
       <a href="#education">Education</a>
-      <a href="#life">Life</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       <a href="#resume">Resume</a>
@@ -62,32 +61,6 @@
           <p>
             I am a student at the University of California, Irvine, studying Computer Science and Engineering.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section life-section" id="life">
-      <div class="section-heading">
-        <p class="eyebrow">Life</p>
-        <h2>Outside Work</h2>
-      </div>
-      <div class="life-layout">
-        <div class="life-copy">
-          <p>
-            Music keeps me grounded, and Juice WRLD is the artist I listen to the most. I love cats, I enjoy the quiet focus of calligraphy, and I like collecting moments that feel personal, calm, and real.
-          </p>
-          <p>
-            This side of my life matters to how I build too: rhythm, patience, emotion, detail, and a sense of style that feels honest instead of forced.
-          </p>
-        </div>
-        <div class="life-gallery">
-          <figure class="life-card life-card-tall">
-            <img src="{% static 'portfolio/img/calligraphy.jpg' %}" alt="Calligraphy artwork by {{ name }}">
-            <figcaption>Calligraphy</figcaption>
-          </figure>
-          <figure class="life-card">
-            <img src="{% static 'portfolio/img/juice-wrld.jpg' %}" alt="Juice WRLD performing on stage">
-          </figure>
         </div>
       </div>
     </section>

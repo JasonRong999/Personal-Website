@@ -286,73 +286,6 @@ h3 {
   line-height: 1.75;
 }
 
-.life-layout {
-  display: grid;
-  grid-template-columns: minmax(17rem, 0.82fr) minmax(0, 1.18fr);
-  gap: 1.2rem;
-  align-items: start;
-}
-
-.life-copy,
-.life-card {
-  border: 1px solid var(--line);
-  background: var(--glass);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.life-copy {
-  display: grid;
-  gap: 1rem;
-  padding: clamp(1.4rem, 4vw, 2.4rem);
-}
-
-.life-copy p {
-  max-width: 34rem;
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
-.life-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(8.5rem, 10rem));
-  justify-content: center;
-  align-items: start;
-  gap: 0.85rem;
-}
-
-.life-card {
-  overflow: hidden;
-  margin: 0;
-  width: 100%;
-}
-
-.life-card img {
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  aspect-ratio: 1 / 1.08;
-  object-fit: cover;
-}
-
-.life-card-tall {
-  grid-row: auto;
-}
-
-.life-card-tall img {
-  aspect-ratio: 0.82 / 1.08;
-}
-
-.life-card figcaption {
-  padding: 0.65rem 0.8rem;
-  border-top: 1px solid var(--faint-line);
-  color: var(--muted);
-  background: rgba(0, 0, 0, 0.45);
-  font-size: 0.82rem;
-}
-
 .project-card {
   overflow: hidden;
   border-radius: 0;
@@ -572,19 +505,9 @@ button:hover,
 
   .intro,
   .education-layout,
-  .life-layout,
   .project-grid,
   .contact-layout {
     grid-template-columns: 1fr;
-  }
-
-  .life-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .life-card-tall {
-    grid-column: auto;
-    grid-row: auto;
   }
 
   h1 {
