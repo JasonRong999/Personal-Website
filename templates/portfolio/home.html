@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ name }} | Personal Website</title>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=18">
+  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=19">
 </head>
 <body>
   <header class="site-header">
@@ -16,6 +16,7 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="#me">Me</a>
       <a href="#education">Education</a>
+      <a href="#life">Life</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       <a href="#resume">Resume</a>
@@ -57,11 +58,27 @@
         <img class="education-logo" src="{% static 'portfolio/img/uci-logo.png' %}" alt="UC Irvine Anteaters logo">
         <div class="education-copy">
           <span>2024 - 2028</span>
-          <h3>Computer Science and Engineering</h3>
+          <h3><i>Bachelor of Science in Computer Science and Engineering</i></h3>
           <p>
             I am a student at the University of California, Irvine, studying Computer Science and Engineering.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="section life-section" id="life">
+      <div class="section-heading">
+        <p class="eyebrow">Personal life</p>
+        <h2>Life with music and arts</h2>
+      </div>
+      <div class="life-layout">
+        <p>
+          I like music and arts. I can play the piano and guitar. Juice WRLD, The Kid LAROI are the artists I listen to the most.
+          <br>I do calligraphy in my free time, finding the peace in my mind when I ever need to calm down. I will go to gallerys sometimes too. I can't deny how art and people create art inspire me, on every aspect of my life, including my work. 
+          <br>Music and arts make part of my life, and I am grateful for everything I have: my family…… my friends…… the opportunities I have, and the life I am living.
+          <br>And! I like animals too! Especially cat. I like how they give me support and comfort when I have a hard time!
+        </p>
+        <img class="life-image" src="{% static "portfolio/img/Life.jpg" %}" alt="Life with music and arts">
       </div>
     </section>
 

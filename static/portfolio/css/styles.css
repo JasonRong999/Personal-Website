@@ -286,6 +286,31 @@ h3 {
   line-height: 1.75;
 }
 
+.life-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem);
+  align-items: start;
+  gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+.life-layout p {
+  max-width: 34rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.life-image {
+  width: 100%;
+  max-width: 18rem;
+  justify-self: end;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
 .project-card {
   overflow: hidden;
   border-radius: 0;
@@ -505,9 +530,14 @@ button:hover,
 
   .intro,
   .education-layout,
+  .life-layout,
   .project-grid,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .life-image {
+    justify-self: start;
   }
 
   h1 {
