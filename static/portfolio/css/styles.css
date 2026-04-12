@@ -286,50 +286,8 @@ h3 {
   line-height: 1.75;
 }
 
-.life-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
-  align-items: stretch;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  background: var(--glass);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.life-copy {
-  display: grid;
-  align-content: center;
-  gap: 1rem;
-  padding: clamp(1.4rem, 4vw, 3rem);
-}
-
-.life-copy span {
-  color: var(--accent-soft);
-  font-size: 0.86rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.life-copy h3 {
-  margin-bottom: 0;
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  line-height: 1.05;
-}
-
-.life-copy p {
-  max-width: 34rem;
-  margin-bottom: 0;
-  color: var(--muted);
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
 .life-image {
-  width: 100%;
-  height: 100%;
-  min-height: 24rem;
-  object-fit: cover;
+  order: -1;
 }
 
 .project-card {

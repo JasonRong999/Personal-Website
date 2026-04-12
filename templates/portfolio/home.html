@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ name }} | Personal Website</title>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=22">
+  <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}?v=23">
 </head>
 <body>
   <header class="site-header">
@@ -71,8 +71,9 @@
         <p class="eyebrow">Personal life</p>
         <h2>Life with music and arts</h2>
       </div>
-      <div class="life-layout">
-        <div class="life-copy">
+      <div class="education-layout life-layout">
+        <img class="life-image" src="{% static "portfolio/img/Life.JPG" %}" alt="Life with music and arts">
+        <div class="education-copy life-copy">
           <span>Outside coding</span>
           <h3>Music, art, and quiet moments</h3>
           <p>
@@ -85,7 +86,6 @@
             Music and art are a real part of my life, and I am grateful for my family, my friends, the opportunities I have, and the life I am living. I also love animals, especially cats, because they bring comfort and support when life gets hard.
           </p>
         </div>
-        <img class="life-image" src="{% static "portfolio/img/Life.JPG" %}" alt="Life with music and arts">
       </div>
     </section>
 
