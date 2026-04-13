@@ -10,6 +10,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     ".vercel.app",
+    "jasonrong.com",
 ]
 
 if os.environ.get("ALLOWED_HOSTS"):
