@@ -27,24 +27,15 @@ if (heroVideo) {
       return;
     }
 
-    muteToggle.textContent = heroVideo.muted ? "Unmute" : "Mute";
+    muteToggle.textContent = heroVideo.muted ? "Sound" : "Mute";
     muteToggle.setAttribute("aria-pressed", String(heroVideo.muted));
     muteToggle.setAttribute(
       "aria-label",
-      heroVideo.muted ? "Unmute background video" : "Mute background video"
+      heroVideo.muted ? "Turn on background video sound" : "Mute background video"
     );
   };
 
-  const loadHeroVideo = () => {
-    const source = heroVideo.querySelector("source[data-src]");
-
-    if (!source || source.src) {
-      return;
-    }
-
-    source.src = source.dataset.src;
-    heroVideo.load();
-
+  const playHeroVideo = () => {
     const playPromise = heroVideo.play();
 
     if (playPromise) {
@@ -58,11 +49,12 @@ if (heroVideo) {
     muteToggle.addEventListener("click", () => {
       heroVideo.muted = !heroVideo.muted;
       syncMuteToggle();
+      playHeroVideo();
     });
   }
 
   window.addEventListener("load", () => {
-    setTimeout(loadHeroVideo, 250);
+    playHeroVideo();
   }, { once: true });
 
   syncMuteToggle();
