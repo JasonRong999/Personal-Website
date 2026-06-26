@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="portrait-window">
-        <img src="{% static 'portfolio/img/profile.jpg' %}" alt="{{ name }} profile photo">
+        <img src="{% static 'portfolio/img/profile.jpg' %}" alt="{{ name }} profile photo" decoding="async">
         <div class="window-caption">
           <strong>Currently</strong>
           <span>Living my life in a way that brings me joy!</span>
@@ -68,7 +68,7 @@
         <h2>UC Irvine</h2>
       </div>
       <div class="education-layout">
-        <img class="education-logo" src="{% static 'portfolio/img/uci-logo.png' %}" alt="UC Irvine Anteaters logo">
+        <img class="education-logo" src="{% static 'portfolio/img/uci-logo.png' %}" alt="UC Irvine Anteaters logo" loading="lazy" decoding="async">
         <div class="education-copy">
           <span>2024 - 2028</span>
           <h3><i>Bachelor of Science in Computer Science and Engineering</i></h3>
@@ -85,7 +85,7 @@
         <h2>Life with music and arts</h2>
       </div>
       <div class="education-layout life-layout">
-        <img class="life-image" src="{% static "portfolio/img/Life.JPG" %}" alt="Life with music and arts">
+        <img class="life-image" src="{% static "portfolio/img/Life.JPG" %}" alt="Life with music and arts" loading="lazy" decoding="async">
         <div class="education-copy life-copy">
           <span>Outside coding</span>
           <h3>Music, art, and quiet moments</h3>
@@ -110,7 +110,7 @@
       <div class="project-grid">
         {% for project in projects %}
           <article class="project-card">
-            <img src="{{ project.image }}" alt="{{ project.name }} preview">
+            <img src="{{ project.image }}" alt="{{ project.name }} preview" loading="lazy" decoding="async">
             <div>
               <p>{{ project.kind }}</p>
               <h3>{{ project.name }}</h3>
@@ -158,7 +158,7 @@
             <span>{{ entry.date }}</span>
             {% if entry.logo %}
               <div class="resume-logo-frame">
-                <img src="{% static entry.logo %}" alt="{{ entry.logo_alt }}">
+                <img src="{% static entry.logo %}" alt="{{ entry.logo_alt }}" loading="lazy" decoding="async">
               </div>
             {% endif %}
             <div>
