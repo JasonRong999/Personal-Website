@@ -7,3 +7,4 @@ staticfiles/
 staticfiles_build/
 .env
 .vercel
+.env*

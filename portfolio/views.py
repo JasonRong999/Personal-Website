@@ -66,6 +66,6 @@ def home(request):
         "instagram": "rongzhiyuan999",
         "projects": projects,
         "resume_entries": resume_entries,
-        "skills": ["Django", "Python", "Java","JavaScript","React","CSS","UI/UX","C++","HTML","ClaudeCode","CodeX","RESTframework","JSX","Node.js","Spring Boot","SQL","MySQL","Frontend craft","Backend development", "Agile methodologies",  "Team collaboration"],
+        "skills": ["Django", "Python", "Java","JavaScript","React","CSS","UI/UX improvement","C++","HTML","ClaudeCode","CodeX","RESTframework","JSX","JavaScript","Node.js","Spring Boot","SQL","MySQL","Frontend craft","Backend development", "Agile methodologies",  "Team collaboration"],
     }
     return render(request, "portfolio/home.html", context)
